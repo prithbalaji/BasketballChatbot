@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#11181e">
+    <meta name="description" content="Ask an AI basketball chatbot about hoops, skills, and strategy.">
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'"
+    >
+    <title>Courtside — Basketball Chat</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="./" aria-label="Courtside home">
+        <span class="brand-ball" aria-hidden="true">🏀</span>
+        <span>courtside<span class="brand-period">.</span></span>
+      </a>
+      <div class="topbar-note">
+        <span class="status-dot" aria-hidden="true"></span>
+        YOUR BASKETBALL SIDEKICK
+      </div>
+    </header>
+
+    <main class="page-shell">
+      <section class="intro">
+        <p class="eyebrow">ASK. LEARN. GET BUCKETS.</p>
+        <h1>Talk hoops.<br><span>Get better.</span></h1>
+        <p class="intro-copy">
+          Ask an AI about basketball, training, game strategy, or whatever else
+          is on your mind.
+        </p>
+        <div class="feature-row" aria-label="Topics">
+          <span>RULES</span>
+          <span>SKILLS</span>
+          <span>STRATEGY</span>
+        </div>
+      </section>
+
+      <section class="chat-card" aria-label="Basketball chatbot">
+        <div class="chat-header">
+          <div class="assistant-avatar" aria-hidden="true">C</div>
+          <div class="assistant-heading">
+            <h2>Coach Courtside</h2>
+            <p><span class="status-dot" aria-hidden="true"></span> AI assistant powered by OpenAI</p>
+          </div>
+          <span class="local-badge">AI CHAT</span>
+        </div>
+
+        <div id="chat-log" class="chat-log" role="log" aria-live="polite" aria-relevant="additions">
+          <article class="message assistant-message">
+            <div class="message-avatar" aria-hidden="true">C</div>
+            <div class="message-content">
+              <span class="speaker">COACH COURTSIDE</span>
+              <p>Hey, welcome to the court! I’m an AI assistant for basketball and beyond. Ask a question in your own words and I’ll do my best to help.</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="suggestions" aria-label="Try asking">
+          <button class="suggestion" type="button" data-prompt="What is a pick and roll?">Explain pick-and-roll</button>
+          <button class="suggestion" type="button" data-prompt="How can I improve my shooting?">Improve my shot</button>
+          <button class="suggestion" type="button" data-prompt="What is a triple-double?">Basketball terms</button>
+        </div>
+
+        <form id="chat-form" class="composer">
+          <label class="visually-hidden" for="chat-input">Ask Coach Courtside</label>
+          <input
+            id="chat-input"
+            type="text"
+            maxlength="2000"
+            placeholder="Ask a basketball question..."
+            autocomplete="off"
+            required
+          >
+          <button id="send-button" type="submit" aria-label="Send message">
+            <span>Send</span>
+            <span aria-hidden="true">↗</span>
+          </button>
+        </form>
+        <p class="chat-disclaimer">Your messages are sent to OpenAI · No live scores or web search</p>
+      </section>
+
+      <aside class="tip-card">
+        <span class="tip-icon" aria-hidden="true">✦</span>
+        <div>
+          <p class="tip-label">A QUICK REMINDER</p>
+          <p class="tip-text">Great players don’t just practice more. They practice with a purpose.</p>
+        </div>
+      </aside>
+    </main>
+
+    <footer class="footer">
+      <span>COURTSIDE <span class="brand-period">·</span> BUILT FOR THE LOVE OF THE GAME</span>
+      <span>AI replies may be incorrect. This site does not save chat history.</span>
+    </footer>
+  </body>
+</html>
